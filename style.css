@@ -1,0 +1,793 @@
+/* =========================
+   UMUMIY SOZLAMALAR
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #0b1020;
+  color: #f5f7ff;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  width: 100%;
+  padding: 22px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: rgba(11, 16, 32, 0.9);
+  backdrop-filter: blur(12px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+  color: #7c5cff;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 25px;
+}
+
+.navbar nav a {
+  font-size: 14px;
+  color: #c7cbe0;
+  transition: 0.3s;
+}
+
+.navbar nav a:hover {
+  color: #8c72ff;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 90vh;
+  padding: 80px 7%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+
+  background:
+    radial-gradient(
+      circle at 80% 30%,
+      rgba(124, 92, 255, 0.2),
+      transparent 30%
+    ),
+    radial-gradient(circle at 10% 80%, rgba(0, 220, 255, 0.1), transparent 30%);
+}
+
+.hero-text {
+  max-width: 650px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 8px 15px;
+  margin-bottom: 20px;
+
+  border-radius: 50px;
+
+  background: rgba(124, 92, 255, 0.12);
+  border: 1px solid rgba(124, 92, 255, 0.3);
+
+  color: #9d89ff;
+  font-size: 14px;
+}
+
+.hero h1 {
+  font-size: clamp(42px, 6vw, 76px);
+  line-height: 1.05;
+  margin-bottom: 25px;
+
+  background: linear-gradient(90deg, #ffffff, #8c72ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  color: #aeb5ce;
+  font-size: 18px;
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-block;
+  padding: 13px 24px;
+  border-radius: 10px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.btn.primary {
+  background: #7c5cff;
+  color: white;
+}
+
+.btn.primary:hover {
+  background: #6847ef;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(124, 92, 255, 0.3);
+}
+
+.btn.secondary {
+  border: 1px solid #343b59;
+  color: #d8dcf0;
+}
+
+.btn.secondary:hover {
+  border-color: #7c5cff;
+  color: #9d89ff;
+  transform: translateY(-3px);
+}
+
+/* =========================
+   HERO RASM
+========================= */
+
+.hero-image {
+  width: 380px;
+  height: 380px;
+  flex-shrink: 0;
+
+  border-radius: 30px;
+  padding: 8px;
+
+  background: linear-gradient(135deg, #7c5cff, #00d9ff);
+
+  transform: rotate(3deg);
+
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4);
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  border-radius: 23px;
+
+  background: #151b30;
+}
+
+/* =========================
+   SECTION
+========================= */
+
+.section {
+  padding: 100px 7%;
+  max-width: 1300px;
+  margin: auto;
+}
+
+.section-num {
+  display: block;
+  color: #7c5cff;
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.section h2 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.section-desc {
+  color: #9da5c0;
+  margin-bottom: 40px;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-card {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+
+  padding: 35px;
+
+  background: #12182b;
+  border: 1px solid #252d48;
+
+  border-radius: 25px;
+
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.profile-img {
+  width: 280px;
+  height: 280px;
+
+  object-fit: cover;
+
+  border-radius: 20px;
+
+  border: 3px solid #7c5cff;
+}
+
+.about-info {
+  flex: 1;
+}
+
+.about-info p {
+  color: #b9bfd4;
+  font-size: 17px;
+  margin-bottom: 25px;
+}
+
+.about-info strong {
+  color: white;
+}
+
+.info-list {
+  list-style: none;
+  display: grid;
+  gap: 14px;
+}
+
+.info-list li {
+  padding: 13px 15px;
+
+  background: #181f36;
+  border-radius: 10px;
+
+  color: #c4c9dc;
+}
+
+/* =========================
+   GRID
+========================= */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+  background: #12182b;
+
+  border: 1px solid #252d48;
+
+  border-radius: 20px;
+
+  padding: 20px;
+
+  transition: 0.3s;
+
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+
+  border-color: #7c5cff;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+  width: 100%;
+  height: 220px;
+
+  object-fit: cover;
+
+  border-radius: 14px;
+
+  margin-bottom: 18px;
+
+  background: #1b2239;
+}
+
+.card h3 {
+  font-size: 21px;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.card p {
+  color: #9da5c0;
+}
+
+/* =========================
+   PROJECTS
+========================= */
+
+.project-card {
+  padding: 25px;
+}
+
+.project-card img {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.project-card h3 {
+  color: #ffffff;
+}
+
+.project-card p {
+  color: #aab1c9;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section {
+  text-align: center;
+
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.contact-section h2 {
+  margin-bottom: 30px;
+}
+
+.phone,
+.email {
+  display: inline-block;
+
+  margin: 8px;
+
+  padding: 14px 25px;
+
+  border-radius: 12px;
+
+  background: #12182b;
+  border: 1px solid #292f49;
+
+  color: #cdd2e5;
+
+  transition: 0.3s;
+}
+
+.phone:hover,
+.email:hover {
+  border-color: #7c5cff;
+  color: #9d89ff;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  text-align: center;
+
+  padding: 30px 20px;
+
+  border-top: 1px solid #252d48;
+
+  color: #747d99;
+
+  font-size: 14px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .navbar nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 60px;
+  }
+
+  .hero-text {
+    max-width: 700px;
+  }
+
+  .hero p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-image {
+    width: 300px;
+    height: 300px;
+  }
+
+  .about-card {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .info-list {
+    text-align: left;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar {
+    padding: 18px 5%;
+  }
+
+  .navbar nav {
+    gap: 10px;
+  }
+
+  .navbar nav a {
+    font-size: 12px;
+  }
+
+  .hero {
+    padding: 60px 5%;
+  }
+
+  .hero h1 {
+    font-size: 43px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero-image {
+    width: 240px;
+    height: 240px;
+  }
+
+  .section {
+    padding: 70px 5%;
+  }
+
+  .section h2 {
+    font-size: 34px;
+  }
+
+  .about-card {
+    padding: 20px;
+    gap: 25px;
+  }
+
+  .profile-img {
+    width: 220px;
+    height: 220px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card img {
+    height: 240px;
+  }
+
+  .phone,
+  .email {
+    display: block;
+    margin: 10px 0;
+  }
+}
+/* =========================
+   GURUHDOShLAR CAROUSEL
+========================= */
+
+.classmates-section {
+  overflow: hidden;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+  position: relative;
+}
+
+.carousel-window {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease;
+}
+
+.classmate-card {
+  flex: 0 0 calc((100% - 40px) / 3);
+  background: #12182b;
+  border: 1px solid #252d48;
+  border-radius: 20px;
+  padding: 20px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.classmate-card:hover {
+  transform: translateY(-8px);
+  border-color: #7c5cff;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.classmate-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  background: #1b2239;
+}
+
+.classmate-card h3 {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.classmate-card p {
+  color: #9da5c0;
+  font-size: 14px;
+}
+
+/* Tugmalar */
+
+.carousel-btn {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid #343b59;
+  background: #12182b;
+  color: white;
+  font-size: 35px;
+  line-height: 1;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 2;
+}
+
+.carousel-btn:hover {
+  background: #7c5cff;
+  border-color: #7c5cff;
+  transform: scale(1.08);
+}
+
+/* Nuqtalar */
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 25px;
+}
+
+.carousel-dot {
+  width: 9px;
+  height: 9px;
+  border: none;
+  border-radius: 50%;
+  background: #343b59;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.carousel-dot.active {
+  width: 25px;
+  border-radius: 10px;
+  background: #7c5cff;
+}
+
+/* Planshet */
+
+@media (max-width: 900px) {
+  .classmate-card {
+    flex: 0 0 calc((100% - 20px) / 2);
+  }
+}
+
+/* Telefon */
+
+@media (max-width: 600px) {
+  .carousel {
+    gap: 8px;
+  }
+
+  .classmate-card {
+    flex: 0 0 100%;
+  }
+
+  .classmate-card img {
+    height: 250px;
+  }
+
+  .carousel-btn {
+    width: 42px;
+    height: 42px;
+    font-size: 28px;
+    background-color: hsl(67, 100%, 50%)
+  }
+}
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Fonda 67 memini chiqarish */
+body::before {
+    content: "67";
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 25vw; /* Juda katta hajm */
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.03); /* Shaffof matn */
+    z-index: -1; /* Kontent ortiga o'tkazish */
+    pointer-events: none;
+    animation: pulse67 4s infinite alternate ease-in-out;
+}
+
+.meme-container {
+  width: 300px;
+  background-color: #1e1e2f;
+  border: 2px solid #6c5ce7;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+  margin: 20px auto;
+}
+
+
+/* Animatsiya qoidasi */
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(3deg); /* Yuqoriga ko'tarilib ozgina buriladi */
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+/* Mem elementiga animatsiyani ulaymiz */
+.meme-container, .meme-caption {
+  display: inline-block;
+  animation: floatAnimation 2s infinite ease-in-out; /* 2 soniyada bir takrorlanadi */
+}
+.bg-pattern-67 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* Sichqonchaga halaqit bermaydi */
+  z-index: 0;
+  opacity: 0.15; /* Ko'rinish darajasi (xohlasangiz 0.3 qiling) */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Ctext x='20' y='60' fill='%236c5ce7' font-size='40' font-weight='bold' font-family='sans-serif'%3E67%3C/text%3E%3C/svg%3E");
+  background-repeat: repeat;
+}
+/* Fon animatsiyasi */
+@keyframes moveBackground67 {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100px 100px; /* Fon sekin diagonal bo'ylab siljiydi */
+  }
+}
+
+/* 1. Elementning umumiy uslubi va orqa fonga joylashuvi */
+.bg-number {
+  position: absolute;
+  top: 10%;
+  left: 20%;
+  font-size: 250px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.03); /* Juda xira, chiroyli ko'rinish beradi */
+  z-index: -1;                     /* Matnlar orqasida turishi uchun */
+  user-select: none;
+  pointer-events: none;
+  
+  /* Animatsiyani ulash: 6 sekundda bir marta to'xtovsiz takrorlanadi */
+  animation: floatNumber 6s ease-in-out infinite;
+}
+
+/* "67" raqamlari joylashgan HTML elementining classi */
+.bg-number, 
+[class*="67"] { 
+  display: inline-block;
+  animation: floatSixtySeven 5s ease-in-out infinite;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* "67" raqamlari joylashgan HTML elementining classi */
+.bg-number, 
+[class*="67"] { 
+  display: inline-block;
+  animation: floatSixtySeven 5s ease-in-out infinite;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Suzish va sekin yorqinlashish animatsiyasi */
+@keyframes floatSixtySeven {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.05;
+  }
+  50% {
+    transform: translateY(-18px) rotate(2deg); /* Yuqoriga ko'tariladi */
+    opacity: 0.12;                           /* Biroz yorqinlashadi */
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.05;
+  }
+}
