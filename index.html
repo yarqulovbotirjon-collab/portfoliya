@@ -3,20 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mening Portfoliom</title>
+    <title>Mening Portfoliam</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <header class="header">
+      <!-- Logotip va Ism -->
+      <a href="#" class="logo">
+        <span class="logo-icon">&lt;/&gt;</span>
+        <span class="logo-text">BOTIR</span>
+      </a>
 
-    <div class="bg-number">67</div>
-
-        <a href="#about">01 Men Haqimda</a
-        <a href="#family">02 Oilam</a>
-        <a href="#projects">03 Loyihalarim</a>
-        <a href="#contact">04 Aloqa</a>
+      <!-- Navigatsiya menyusi -->
+      <nav class="nav-menu">
+        <ul>
+          <li>
+            <a href="#about"><span class="nav-num">01</span> Men Haqimda</a>
+          </li>
+          <li>
+            <a href="#family"><span class="nav-num">02</span> Oilam</a>
+          </li>
+          <li>
+            <a href="#projects"><span class="nav-num">03</span> Loyihalarim</a>
+          </li>
+          <li>
+            <a href="#contact"><span class="nav-num">04</span> Aloqa</a>
+          </li>
+        </ul>
       </nav>
     </header>
-
     <!-- Bosh sahifa (Hero section) -->
     <section class="hero">
       <div class="hero-text">
@@ -44,11 +59,11 @@
         <img src="./men.jpg" alt="Mening rasmim" class="profile-img" />
         <div class="about-info">
           <p>
-            Salom! Ismim <strong>botirpupsi228</strong>. Dasturlashni o'rganaman va
+            Salom! Ismim <strong>botirjon</strong>. Dasturlashni o'rganaman va
             kelajakda professional dasturchi bo'lishni orzu qilaman.
           </p>
           <ul class="info-list">
-            <li>🎂 <strong>Tug'ilgan sanam:</strong> 2012.02.12</li>
+            <li>🎂 <strong>Tug'ilgan sanam:</strong> 02.12.2012</li>
             <li>🏫 <strong>Maktabim:</strong>23-maktab</li>
             <li>💻 <strong>Hozir o'rganyapman:</strong> HTML va CSS</li>
             <li>⚽ <strong>Sevimli mashg'ulot:</strong> suzish</li>
@@ -78,30 +93,29 @@
         </div>
         <div class="card">
           <img src="./opam va ukam.jpg" alt="" />
-          <h3>opam va ukam </h3>
-          <p>opam inter nashinel da oqidilar ukam bezori </p>
+          <h3>opam va ukam</h3>
+          <p>opam interda oqidi ukam men bilan 23 maktabda oqidi</p>
         </div>
       </div>
     </section>
 
     <!-- 03 Loyihalarim -->
-    <section id="projects" class="section">
+    <section class="projects-section" id="projects">
       <span class="section-num">03</span>
-      <h2>Loyihalarim</h2>
+      <h2 class="section-title">Loyihalarim</h2>
 
-      <div class="grid">
-        <div class="card project-card">
-          <h3>BIO CWT</h3>
-          <p>Ajoyib animatsiyalarga to'la sayt</p>
-          <img src="./images (25).jpg" alt="Loyiha 1" />
+      <div class="projects-container">
+        <!-- 1-Loyiha -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="./image.png" alt="medcard loyihasi" />
+          </div>
+          <div class="project-info">
+            <h3>MedCard</h3>
+            <p>medcard</p>
+            <a class="loyiha__anchor" href="http://project1-bay-three.vercel.app/">Ko`rish</a>
+          </div>
         </div>
-        <div class="card project-card">
-          <h3>Moshinalar sotish</h3>
-          <p>Sifatli moshinalar uchun sayt</p>
-          <img src="./images (25).jpg" alt="Loyiha 2" />
-        </div>
-      </div>
-    </section>
     <!-- 05 Guruhdoshlar -->
     <section id="classmates" class="section classmates-section">
       <span class="section-num">05</span>
@@ -185,14 +199,12 @@
       <span class="section-num">04</span>
       <h2>Men bilan bog'laning</h2>
       <p class="phone">+998 95 699 01 41</p>
-      <p class="email">@BOTIRPUPSI228.gmile com
-
-      </p>
+      <p class="email">@botirjon.gmail com</p>
     </section>
 
     <!-- Footer -->
     <footer>
-      <p>© 2026 Sizning Ismingiz. Barcha huquqlar himoyalangan.</p>
+      <p>© 2026 biz sizga yordam beramiz.</p>
     </footer>
     <script>
       const track = document.getElementById("carouselTrack");

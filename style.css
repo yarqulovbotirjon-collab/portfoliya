@@ -1,7 +1,63 @@
 /* =========================
    UMUMIY SOZLAMALAR
 ========================= */
+/* Header umumiy konteyneri */
+.header {
+  display: flex;
+  align-items: center; /* Elementlarni vertikal o'rtaga tekshilaydi */
+  justify-content: space-between; /* Logotip va menyuni ikki chetga suradi */
+  padding: 20px 8%; /* Chetlardan masofa */
+  background-color: #0d0f1d; /* Fon rangi */
+}
 
+/* Logotip uslubi */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Belgilar orasidagi masofa */
+  text-decoration: none;
+}
+
+.logo-icon {
+  color: #8b5cf6;
+  font-weight: bold;
+  font-size: 20px;
+  font-family: monospace;
+}
+
+.logo-text {
+  color: #8b5cf6;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+/* Menyu uslubi */
+.nav-menu ul {
+  display: flex; /* Menyudagi <li> larni yonma-yon qiladi */
+  list-style: none;
+  gap: 25px; /* Menyu elementlari orasidagi masofa */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-num {
+  color: #8b5cf6;
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+.nav-menu a:hover {
+  color: #8b5cf6;
+}
 * {
   margin: 0;
   padding: 0;
@@ -667,27 +723,27 @@ footer {
     width: 42px;
     height: 42px;
     font-size: 28px;
-    background-color: hsl(67, 100%, 50%)
+    background-color: hsl(67, 100%, 50%);
   }
 }
 body {
-    position: relative;
-    overflow-x: hidden;
+  position: relative;
+  overflow-x: hidden;
 }
 
 /* Fonda 67 memini chiqarish */
 body::before {
-    content: "67";
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 25vw; /* Juda katta hajm */
-    font-weight: 900;
-    color: rgba(255, 255, 255, 0.03); /* Shaffof matn */
-    z-index: -1; /* Kontent ortiga o'tkazish */
-    pointer-events: none;
-    animation: pulse67 4s infinite alternate ease-in-out;
+  content: "67";
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 25vw; /* Juda katta hajm */
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.03); /* Shaffof matn */
+  z-index: -1; /* Kontent ortiga o'tkazish */
+  pointer-events: none;
+  animation: pulse67 4s infinite alternate ease-in-out;
 }
 
 .meme-container {
@@ -700,7 +756,6 @@ body::before {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
   margin: 20px auto;
 }
-
 
 /* Animatsiya qoidasi */
 @keyframes floatAnimation {
@@ -716,7 +771,8 @@ body::before {
 }
 
 /* Mem elementiga animatsiyani ulaymiz */
-.meme-container, .meme-caption {
+.meme-container,
+.meme-caption {
   display: inline-block;
   animation: floatAnimation 2s infinite ease-in-out; /* 2 soniyada bir takrorlanadi */
 }
@@ -750,17 +806,17 @@ body::before {
   font-size: 250px;
   font-weight: bold;
   color: rgba(255, 255, 255, 0.03); /* Juda xira, chiroyli ko'rinish beradi */
-  z-index: -1;                     /* Matnlar orqasida turishi uchun */
+  z-index: -1; /* Matnlar orqasida turishi uchun */
   user-select: none;
   pointer-events: none;
-  
+
   /* Animatsiyani ulash: 6 sekundda bir marta to'xtovsiz takrorlanadi */
   animation: floatNumber 6s ease-in-out infinite;
 }
 
 /* "67" raqamlari joylashgan HTML elementining classi */
-.bg-number, 
-[class*="67"] { 
+.bg-number,
+[class*="67"] {
   display: inline-block;
   animation: floatSixtySeven 5s ease-in-out infinite;
   user-select: none;
@@ -768,8 +824,8 @@ body::before {
 }
 
 /* "67" raqamlari joylashgan HTML elementining classi */
-.bg-number, 
-[class*="67"] { 
+.bg-number,
+[class*="67"] {
   display: inline-block;
   animation: floatSixtySeven 5s ease-in-out infinite;
   user-select: none;
@@ -784,10 +840,89 @@ body::before {
   }
   50% {
     transform: translateY(-18px) rotate(2deg); /* Yuqoriga ko'tariladi */
-    opacity: 0.12;                           /* Biroz yorqinlashadi */
+    opacity: 0.12; /* Biroz yorqinlashadi */
   }
   100% {
     transform: translateY(0px) rotate(0deg);
     opacity: 0.05;
   }
+}
+/* Loyihalar bo'limi konteyneri */
+.projects-section {
+  padding: 40px 8%;
+  background-color: #0b0d17;
+  color: #ffffff;
+}
+
+.section-num {
+  color: #8b5cf6;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.section-title {
+  font-size: 32px;
+  margin-top: 5px;
+  margin-bottom: 30px;
+}
+
+/* Loyihalarni yonma-yon qilish (Flexbox) */
+.projects-container {
+  display: flex;
+  flex-wrap: wrap; /* Ekran kichik bo'lganda pastga tushadi */
+  gap: 24px; /* Kartochkalar orasidagi masofa */
+}
+
+/* Har bir loyiha kartochkasi */
+.project-card {
+  flex: 1 1 300px; /* Minimal kengligi 300px, teng bo'linadi */
+  max-width: 400px;
+  background-color: #151828;
+  border-radius: 16px;
+  overflow: hidden; /* Rasm burchaklardan chiqib ketmasligi uchun */
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(139, 92, 246, 0.2);
+}
+
+/* Rasm uslubi */
+.project-image {
+  width: 100%;
+  height: 200px; /* Rasmlar bir xil balandlikda bo'ladi */
+  background-color: #1e2238;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Rasmni buzmasdan sig'diradi */
+  display: block;
+}
+
+/* Loyiha haqida matnlar */
+.project-info {
+  padding: 20px;
+}
+
+.project-info h3 {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.project-info p {
+  margin: 0;
+  color: #a0aec0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.loyiha__anchor {
+  border: 1px solid #00d9ff;
+  padding: 10px 16px;
 }
